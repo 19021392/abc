@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/abc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--  navbar-->
+    <nav class="navbar">
+        <h4>QLDA</h4>
+        <div class="profile">
+            <span class="fa fa-search"></span>
+            <img class="profile-image" src="https://i.vietgiaitri.com/2019/6/8/real-madrid-chieu-mo-thanh-cong-eden-hazard-2f1efa.jpg" alt="">
+            <p class="profile-name">Lorem ipsum</p>
+        </div>
+    </nav>
+
+    <!-- sidebar-->
+    <input type="checkbox" id="toggle">
+    <label class="side-toggle" for="toggle">
+        <span class="fa fa-bars"></span>
+    </label>
+
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><i class="fa fa-commenting" aria-hidden="true"></i></span>
+                    <span class="title">messages</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                    <span class="title">setting</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    <span class="title">Password</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="./Login.html">
+                    <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    <span class="title">Sign out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- main dashboard-->
+    <main>
+        <div class="dashboard-container">
+            <!-- 4 cards top-->
+            <div class="card total1">
+                <div class="info">
+                    test
+                </div>
+            </div>
+            <div class="card total2">
+
+            </div>
+            <div class="card total3"></div>
+            <div class="card total4"></div>
+
+            <!-- 2 cards bottom-->
+            <div class="card detail"></div>
+            <div class="card customer"></div>
+        </div>
+    </main>
+    <script>
+
+        let list = document.querySelectorAll('.list');
+        for (let i = 0; i < list.length; i++) {
+            list[i].onclick = function() {
+                let j = 0;
+                while(j < list.length) {
+                    list[j++].className = 'list';
+                }
+                list[i].className = 'list active';
+            }
+        }
+        
+    </script>
+</body>
+</html>
