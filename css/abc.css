@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -8,11 +9,12 @@ body {
     min-height: 100vh;
     background-color: #f4f4fb;
     /* background: white; */
+    overflow: hidden;
 }
 /*.----------------------.*/
-.navbar {
+header {
     display: flex;
-    position: fixed;
+    position: absolute;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -25,54 +27,93 @@ body {
 }
 .profile {
     display: flex;
-    width: 32%;
-    max-width: 200px;
+    max-width: 600px;
     justify-content: space-around;
     align-items: center;
 }
+
+
+.box {
+    position: relative;
+    padding-right: 30px;
+}
+
+.stext {
+    width: 300px;
+    height: 50px;
+    background: #b3b3be;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #fff;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fa-search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 16px;
+    margin-top: 16px;
+    z-index: 1;
+    color: black;
+ }
+
 .profile-image {
     width: 30px;
     height: 30px;
     object-fit: cover;
     border-radius: 50%;
+    padding-left: -40px;
+    /* padding-right: 5px; */
 }
-.profile_name {
-    font-size: 0.9rem;
-    margin-left: -20px;
+.item >i {
+    padding-right: 10px;
 }
+.xy >a:hover {
+    background: grey;
+}
+.xy >a:active {
+    background: blue;
+}
+
+.abc {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #b3b3be;
+    color: black;
+}
+
+
+
+
 .side-toggle {
     position: fixed;
     z-index: 2;
-    top: 20px;
-    left: 25px;
+    top: 13px;
+    left: 20px;
     float: right;
     font-size: 20px;
     cursor: pointer;
 }
 
-.sidebar {
-    position: fixed;
-    height: 100%;
-    width: 200px;
-    top: 0px;
-    left: 0px;
-    padding: 80px 0 20px 0;
-    color: #fff;
-    background-color: #7b268a;
+/*---------------- */
+nav {
+  float: left;
+  width: 15%; 
 }
-
-.sidebar-menu {
-    display: flex;
-    align-items: center;
-    padding: 15px 25px;
-    width: 100%;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+article {
+    float: left;
+    padding-top: 60px;
+    width: 85%;
 }
-.sidebar-menu >span {
-    font-size: 25px;
-    padding-right: 30px;
-
+section::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 .navigation {
     position: fixed;
@@ -85,16 +126,13 @@ body {
 #toggle:checked ~ .navigation {
     width: 60px;
 }
-#toggle:checked ~ main {
-    padding: 6rem 2rem 2rem 6rem;
-}
 .navigation  ul {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding-left: 5px;
-    padding-top: 40px;
+    /* padding-left: 5px; */
+    padding-top: 32px;
 }
 .navigation  ul li {
     position: relative;
@@ -140,29 +178,3 @@ body {
     white-space: nowrap;
 }
 /* .----------------------. */
-main {
-    min-height: 100%;
-    padding: 6rem 1rem 2rem 14rem;
-    /* color: black; */
-}
-.dashboard-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
-    grid-template-rows: auto;
-    gap: 1rem;
-    grid-template-areas: 
-    "total1 total2 total3 total4"
-    "detail detail detail customer customer"
-    "detail detail detail customer customer";
-}
-.card {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-}
-.total1 {
-    grid-area: tatal1;
-    background-color: green;
-    color: #fff;
-
-}
